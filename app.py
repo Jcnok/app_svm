@@ -12,6 +12,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from pycaret.utils import check_metric
 from streamlit_lottie import st_lottie
+import plotly.graph_objects as go
+from streamlit_echarts import st_echarts
 import requests
 # remove warnings do streamlit
 st.set_option('deprecation.showPyplotGlobalUse', False)
@@ -29,7 +31,7 @@ st.set_page_config(
     layout="wide", #centered",
     initial_sidebar_state='auto',
     menu_items=None)
-paginas = ['Home','Análise python','Análise de Churn', 'Solução', "Demonstação","Filtro", "Predição de Churn", "Dashbord comparativo"]
+paginas = ['Home','Análise python','Análise de Churn', 'Solução', "Demonstação","Filtro", "Predição de Churn","Consulta Cliente", "Dashbord comparativo"]
 site = ""
 site_pred = ""
 ###### SIDE BAR ######
@@ -197,7 +199,7 @@ if pagina == 'Predição de Churn':
     st.sidebar.write("""Aqui o cliente consegue selecionar os dados do perfil do cliente de forma individual.
      O modelo irá informar se esse perfil tem ou não uma tendência maior ao Churn.
     """)
-
+        
     st.markdown('---')    
     sexo = st.radio('Selecione o Sexo',['MASCULINO', 'FEMININO'])
     idade = np.int64(st.slider('Entre com a idade:', 18, 92, 38))	
@@ -225,17 +227,305 @@ if pagina == 'Predição de Churn':
     if st.button('CLIQUE AQUI PARA EXECUTAR O MODELO'):
         modelo = load_model('./lgbm_tune_pycaret') 
         pred_test = predict_model(modelo, data = teste)
-        prob = list(pred_test.Score.round(2)*100)
-        if pred_test.Label.values == 1:            
-            result =f'''
-                    Com uma probabilidade de {prob}%, o modelo identificou que esse Cliente tem uma maior tendência ao Churn.
-                    '''
+        #prob = list(pred_test.Score.round(2)*100)
+        value = ((pred_test.Score.astype('float')[0])*100).round(2)
+        
+        if pred_test.Label.values == 1:
+            ##função Js para Grafico de Gauge.
+            color = [[0.25, '#ffa173'],[0.5, '#fa6644'],[0.75, '#f52c15'],[1, '#900000']]
+            option = {
+                    "series": [
+                        {
+                            "type": 'gauge',
+                            "startAngle": 180,
+                            "endAngle": 0,
+                            "min": 50,
+                            "max": 100,
+                            "splitNumber": 8,
+                            "axisLine": {
+                                "lineStyle": {
+                                "width": 6,
+                                "color": color                            
+                            }
+                            },
+                        "pointer": {
+                                "icon": 'path://M12.8,0.7l12,40.1H0.7L12.8,0.7z',
+                                "length": "12%",
+                                "width": 20,
+                                "offsetCenter": [0, '-60%'],
+                                "itemStyle": {
+                                "color": 'auto'
+                                }
+                            },
+                        "axisTick": {
+                                "length": 12,
+                                "lineStyle": {
+                                "color": 'auto',
+                                "width": 2
+                                }
+                            },
+                        "splitLine": {
+                                "length": 20,
+                                "lineStyle": {
+                                "color": 'auto',
+                                "width": 5
+                                }
+                            },
+                        "axisLabel": {
+                                "color": '#464646',
+                                "fontSize": 15,
+                                "distance": -60
+                                                        
+                            },
+                        "title": {
+                                "offsetCenter": [0, '-20%'],
+                                "fontSize": 20
+                            },
+                        "detail": {
+                                "fontSize": 20,
+                                "offsetCenter": [0, '0%'],
+                                "valueAnimation": "true",
+                                "formatter":value,                           
+                                "color": 'auto'
+                            },
+                        "data": [
+                                {
+                                "value": value,
+                                "name": 'Churn Rating'
+                                }
+                            ]
+                        }
+                    ]
+                }; 
+            st.markdown(f'### Probabilidade do cliente Cancelar o serviço: {value}%.')            
+            ##Plot Gauge
+            st_echarts(options=option, width="100%", key=value)             
+            
         else:
-           result =f'''
-                    Com uma probabilidede de {prob}%, o modelo identificou que esse Cliente tem uma maior tendência em permanecer na Empresa.
-                    ''' 
-      
-        st.subheader(result)
+            ##função Js para Grafico de Gauge.
+            color = [[0.25, '#7eab70'],[0.5, '#659259'],[0.75, '#4d7841'],[1, '#056003']]
+            option = {
+                    "series": [
+                        {
+                            "type": 'gauge',
+                            "startAngle": 180,
+                            "endAngle": 0,
+                            "min": 50,
+                            "max": 100,
+                            "splitNumber": 8,
+                            "axisLine": {
+                                "lineStyle": {
+                                "width": 6,
+                                "color": color                            
+                            }
+                            },
+                        "pointer": {
+                                "icon": 'path://M12.8,0.7l12,40.1H0.7L12.8,0.7z',
+                                "length": "12%",
+                                "width": 20,
+                                "offsetCenter": [0, '-60%'],
+                                "itemStyle": {
+                                "color": 'auto'
+                                }
+                            },
+                        "axisTick": {
+                                "length": 12,
+                                "lineStyle": {
+                                "color": 'auto',
+                                "width": 2
+                                }
+                            },
+                        "splitLine": {
+                                "length": 20,
+                                "lineStyle": {
+                                "color": 'auto',
+                                "width": 5
+                                }
+                            },
+                        "axisLabel": {
+                                "color": '#464646',
+                                "fontSize": 15,
+                                "distance": -60
+                                                        
+                            },
+                        "title": {
+                                "offsetCenter": [0, '-20%'],
+                                "fontSize": 20
+                            },
+                        "detail": {
+                                "fontSize": 20,
+                                "offsetCenter": [0, '0%'],
+                                "valueAnimation": "true",
+                                "formatter":value,                           
+                                "color": 'auto'
+                            },
+                        "data": [
+                                {
+                                "value": value,
+                                "name": 'Churn Rating'
+                                }
+                            ]
+                        }
+                    ]
+                }
+            st.markdown(f'### Probabilidade do cliente permanecer com o serviço: {value}%.')    
+            ##Plot Gauge
+            st_echarts(options=option, width="100%", key=value)
+
+###### Consulta Cliente ########
+if pagina == "Consulta Cliente" :
+    df = pd.read_csv("https://raw.githubusercontent.com/Jcnok/Stack_Labs_Churn/main/Data/Churn_Modelling.csv")
+    ids = df.CustomerId.unique() 
+    modelo = load_model('./lgbm_tune_pycaret')
+    id = st.number_input("Informe o ID do Cliente",ids.min(),ids.max())
+    if id in ids:
+        filtro = df.query(f'CustomerId=={id}')
+        st.dataframe(filtro)
+        pred_filtro = predict_model(modelo,data=filtro)
+        value = round((pred_filtro.Score.astype('float').to_list()[0])*100,2)
+        if pred_filtro.Label.values == 1:
+            ##função Js para Grafico de Gauge.
+            color = [[0.25, '#ffa173'],[0.5, '#fa6644'],[0.75, '#f52c15'],[1, '#900000']]
+            option = {
+                    "series": [
+                        {
+                            "type": 'gauge',
+                            "startAngle": 180,
+                            "endAngle": 0,
+                            "min": 50,
+                            "max": 100,
+                            "splitNumber": 8,
+                            "axisLine": {
+                                "lineStyle": {
+                                "width": 6,
+                                "color": color                            
+                            }
+                            },
+                        "pointer": {
+                                "icon": 'path://M12.8,0.7l12,40.1H0.7L12.8,0.7z',
+                                "length": "12%",
+                                "width": 20,
+                                "offsetCenter": [0, '-60%'],
+                                "itemStyle": {
+                                "color": 'auto'
+                                }
+                            },
+                        "axisTick": {
+                                "length": 12,
+                                "lineStyle": {
+                                "color": 'auto',
+                                "width": 2
+                                }
+                            },
+                        "splitLine": {
+                                "length": 20,
+                                "lineStyle": {
+                                "color": 'auto',
+                                "width": 5
+                                }
+                            },
+                        "axisLabel": {
+                                "color": '#464646',
+                                "fontSize": 15,
+                                "distance": -60
+                                                        
+                            },
+                        "title": {
+                                "offsetCenter": [0, '-20%'],
+                                "fontSize": 20
+                            },
+                        "detail": {
+                                "fontSize": 20,
+                                "offsetCenter": [0, '0%'],
+                                "valueAnimation": "true",
+                                "formatter":value,                           
+                                "color": 'auto'
+                            },
+                        "data": [
+                                {
+                                "value": value,
+                                "name": 'Churn Rating'
+                                }
+                            ]
+                        }
+                    ]
+                }; 
+            st.markdown(f'### Probabilidade do cliente Cancelar o serviço: {value}%.')            
+            ##Plot Gauge
+            st_echarts(options=option, width="100%", key=value)             
+        else:
+                ##função Js para Grafico de Gauge.
+                color = [[0.25, '#7eab70'],[0.5, '#659259'],[0.75, '#4d7841'],[1, '#056003']]
+                option = {
+                        "series": [
+                            {
+                                "type": 'gauge',
+                                "startAngle": 180,
+                                "endAngle": 0,
+                                "min": 50,
+                                "max": 100,
+                                "splitNumber": 8,
+                                "axisLine": {
+                                    "lineStyle": {
+                                    "width": 6,
+                                    "color": color                            
+                                }
+                                },
+                            "pointer": {
+                                    "icon": 'path://M12.8,0.7l12,40.1H0.7L12.8,0.7z',
+                                    "length": "12%",
+                                    "width": 20,
+                                    "offsetCenter": [0, '-60%'],
+                                    "itemStyle": {
+                                    "color": 'auto'
+                                    }
+                                },
+                            "axisTick": {
+                                    "length": 12,
+                                    "lineStyle": {
+                                    "color": 'auto',
+                                    "width": 2
+                                    }
+                                },
+                            "splitLine": {
+                                    "length": 20,
+                                    "lineStyle": {
+                                    "color": 'auto',
+                                    "width": 5
+                                    }
+                                },
+                            "axisLabel": {
+                                    "color": '#464646',
+                                    "fontSize": 15,
+                                    "distance": -60
+                                                            
+                                },
+                            "title": {
+                                    "offsetCenter": [0, '-20%'],
+                                    "fontSize": 20
+                                },
+                            "detail": {
+                                    "fontSize": 20,
+                                    "offsetCenter": [0, '0%'],
+                                    "valueAnimation": "true",
+                                    "formatter":value,                           
+                                    "color": 'auto'
+                                },
+                            "data": [
+                                    {
+                                    "value": value,
+                                    "name": 'Churn Rating'
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                st.markdown(f'### Probabilidade do cliente permanecer com o serviço: {value}%.')    
+                ##Plot Gauge
+                st_echarts(options=option, width="100%", key=value)
+    else:
+        st.markdown("### Cliente inexistente, informe um id válido!")    
+
 ###### Dashboard Compartivo ######
 if pagina == 'Dashbord comparativo':    
     st.subheader("Dashboard compartivo entre o resultado real Vs resultado do modelo")    
