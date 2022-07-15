@@ -62,7 +62,7 @@ if pagina == 'Análise de Churn BI':
     st.subheader("Análise de Churn")    
     col1,col2,col3 = st.columns([1,2,3])
     site = "https://bi"
-    st.components.v1.iframe(site, width=960, height=600, scrolling=True)
+    st.components.v1.iframe(site,  width=1400, height=800, scrolling=True)
 
     st.sidebar.write("""O Dashbord: exemplificar.   
     
@@ -368,6 +368,8 @@ if pagina == "Consulta Cliente" :
     df = pd.read_csv("https://raw.githubusercontent.com/Jcnok/Stack_Labs_Churn/main/Data/Churn_Modelling.csv")
     ids = df.CustomerId.unique() 
     modelo = load_model('./lgbm_tune_pycaret')
+    st.markdown("### Sugestão de Ids para consulta:")
+    st.write(df['CustomerId'].sample(5))
     id = st.number_input("Informe o ID do Cliente",ids.min(),ids.max())
     if id in ids:
         filtro = df.query(f'CustomerId=={id}')

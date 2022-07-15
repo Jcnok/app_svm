@@ -15810,3 +15810,461 @@
                                 reg_lambda=1.5785605569240774e-05)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
 2022-07-13 02:48:01,854:INFO:Checking exceptions
 2022-07-13 02:48:01,855:INFO:Preloading libraries
+2022-07-15 17:59:35,460:INFO:Initializing load_model()
+2022-07-15 17:59:35,461:INFO:load_model(model_name=./lgbm_tune_pycaret, platform=None, authentication=None, verbose=True)
+2022-07-15 17:59:35,594:INFO:Initializing predict_model()
+2022-07-15 17:59:35,595:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='Exited')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('pca', 'passthrough'),
+                ['trained_model',
+                 LGBMClassifier(bagging_fraction=0.9090704690562509,
+                                bagging_freq=4,
+                                feature_fraction=0.5065746664258484,
+                                learning_rate=0.06699588304420269,
+                                min_child_samples=76,
+                                min_split_gain=0.4450203221860495,
+                                n_estimators=129, num_leaves=5,
+                                optimize_threshold='F1', random_state=777,
+                                reg_alpha=5.172619707249412e-07,
+                                reg_lambda=1.5785605569240774e-05)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2022-07-15 17:59:35,596:INFO:Checking exceptions
+2022-07-15 17:59:35,597:INFO:Preloading libraries
+2022-07-15 17:59:49,666:INFO:Initializing load_model()
+2022-07-15 17:59:49,667:INFO:load_model(model_name=./lgbm_tune_pycaret, platform=None, authentication=None, verbose=True)
+2022-07-15 17:59:49,752:INFO:Initializing predict_model()
+2022-07-15 17:59:49,753:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='Exited')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('pca', 'passthrough'),
+                ['trained_model',
+                 LGBMClassifier(bagging_fraction=0.9090704690562509,
+                                bagging_freq=4,
+                                feature_fraction=0.5065746664258484,
+                                learning_rate=0.06699588304420269,
+                                min_child_samples=76,
+                                min_split_gain=0.4450203221860495,
+                                n_estimators=129, num_leaves=5,
+                                optimize_threshold='F1', random_state=777,
+                                reg_alpha=5.172619707249412e-07,
+                                reg_lambda=1.5785605569240774e-05)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2022-07-15 17:59:49,754:INFO:Checking exceptions
+2022-07-15 17:59:49,754:INFO:Preloading libraries
+2022-07-15 18:00:15,957:INFO:Initializing load_model()
+2022-07-15 18:00:15,957:INFO:load_model(model_name=./lgbm_tune_pycaret, platform=None, authentication=None, verbose=True)
+2022-07-15 18:02:08,992:INFO:Initializing load_model()
+2022-07-15 18:02:08,993:INFO:load_model(model_name=./lgbm_tune_pycaret, platform=None, authentication=None, verbose=True)
+2022-07-15 18:02:51,345:INFO:Initializing load_model()
+2022-07-15 18:02:51,345:INFO:load_model(model_name=./lgbm_tune_pycaret, platform=None, authentication=None, verbose=True)
+2022-07-15 18:03:09,970:INFO:Initializing load_model()
+2022-07-15 18:03:09,970:INFO:load_model(model_name=./lgbm_tune_pycaret, platform=None, authentication=None, verbose=True)
+2022-07-15 18:03:25,519:INFO:Initializing load_model()
+2022-07-15 18:03:25,520:INFO:load_model(model_name=./lgbm_tune_pycaret, platform=None, authentication=None, verbose=True)
+2022-07-15 18:03:25,587:INFO:Initializing predict_model()
+2022-07-15 18:03:25,588:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='Exited')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('pca', 'passthrough'),
+                ['trained_model',
+                 LGBMClassifier(bagging_fraction=0.9090704690562509,
+                                bagging_freq=4,
+                                feature_fraction=0.5065746664258484,
+                                learning_rate=0.06699588304420269,
+                                min_child_samples=76,
+                                min_split_gain=0.4450203221860495,
+                                n_estimators=129, num_leaves=5,
+                                optimize_threshold='F1', random_state=777,
+                                reg_alpha=5.172619707249412e-07,
+                                reg_lambda=1.5785605569240774e-05)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2022-07-15 18:03:25,589:INFO:Checking exceptions
+2022-07-15 18:03:25,589:INFO:Preloading libraries
+2022-07-15 18:04:25,744:INFO:Initializing load_model()
+2022-07-15 18:04:25,744:INFO:load_model(model_name=./lgbm_tune_pycaret, platform=None, authentication=None, verbose=True)
+2022-07-15 18:04:25,804:INFO:Initializing predict_model()
+2022-07-15 18:04:25,804:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='Exited')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('pca', 'passthrough'),
+                ['trained_model',
+                 LGBMClassifier(bagging_fraction=0.9090704690562509,
+                                bagging_freq=4,
+                                feature_fraction=0.5065746664258484,
+                                learning_rate=0.06699588304420269,
+                                min_child_samples=76,
+                                min_split_gain=0.4450203221860495,
+                                n_estimators=129, num_leaves=5,
+                                optimize_threshold='F1', random_state=777,
+                                reg_alpha=5.172619707249412e-07,
+                                reg_lambda=1.5785605569240774e-05)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2022-07-15 18:04:25,805:INFO:Checking exceptions
+2022-07-15 18:04:25,806:INFO:Preloading libraries
+2022-07-15 18:04:32,832:INFO:Initializing load_model()
+2022-07-15 18:04:32,833:INFO:load_model(model_name=./lgbm_tune_pycaret, platform=None, authentication=None, verbose=True)
+2022-07-15 18:04:32,910:INFO:Initializing predict_model()
+2022-07-15 18:04:32,912:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='Exited')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('pca', 'passthrough'),
+                ['trained_model',
+                 LGBMClassifier(bagging_fraction=0.9090704690562509,
+                                bagging_freq=4,
+                                feature_fraction=0.5065746664258484,
+                                learning_rate=0.06699588304420269,
+                                min_child_samples=76,
+                                min_split_gain=0.4450203221860495,
+                                n_estimators=129, num_leaves=5,
+                                optimize_threshold='F1', random_state=777,
+                                reg_alpha=5.172619707249412e-07,
+                                reg_lambda=1.5785605569240774e-05)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2022-07-15 18:04:32,913:INFO:Checking exceptions
+2022-07-15 18:04:32,914:INFO:Preloading libraries
+2022-07-15 18:04:41,771:INFO:Initializing load_model()
+2022-07-15 18:04:41,772:INFO:load_model(model_name=./lgbm_tune_pycaret, platform=None, authentication=None, verbose=True)
+2022-07-15 18:04:41,849:INFO:Initializing predict_model()
+2022-07-15 18:04:41,850:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='Exited')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('pca', 'passthrough'),
+                ['trained_model',
+                 LGBMClassifier(bagging_fraction=0.9090704690562509,
+                                bagging_freq=4,
+                                feature_fraction=0.5065746664258484,
+                                learning_rate=0.06699588304420269,
+                                min_child_samples=76,
+                                min_split_gain=0.4450203221860495,
+                                n_estimators=129, num_leaves=5,
+                                optimize_threshold='F1', random_state=777,
+                                reg_alpha=5.172619707249412e-07,
+                                reg_lambda=1.5785605569240774e-05)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2022-07-15 18:04:41,851:INFO:Checking exceptions
+2022-07-15 18:04:41,851:INFO:Preloading libraries
+2022-07-15 18:04:51,583:INFO:Initializing load_model()
+2022-07-15 18:04:51,583:INFO:load_model(model_name=./lgbm_tune_pycaret, platform=None, authentication=None, verbose=True)
+2022-07-15 18:04:51,649:INFO:Initializing predict_model()
+2022-07-15 18:04:51,650:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='Exited')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('pca', 'passthrough'),
+                ['trained_model',
+                 LGBMClassifier(bagging_fraction=0.9090704690562509,
+                                bagging_freq=4,
+                                feature_fraction=0.5065746664258484,
+                                learning_rate=0.06699588304420269,
+                                min_child_samples=76,
+                                min_split_gain=0.4450203221860495,
+                                n_estimators=129, num_leaves=5,
+                                optimize_threshold='F1', random_state=777,
+                                reg_alpha=5.172619707249412e-07,
+                                reg_lambda=1.5785605569240774e-05)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2022-07-15 18:04:51,651:INFO:Checking exceptions
+2022-07-15 18:04:51,652:INFO:Preloading libraries
+2022-07-15 18:05:19,136:INFO:Initializing load_model()
+2022-07-15 18:05:19,138:INFO:load_model(model_name=./lgbm_tune_pycaret, platform=None, authentication=None, verbose=True)
+2022-07-15 18:05:19,197:INFO:Initializing predict_model()
+2022-07-15 18:05:19,199:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='Exited')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('pca', 'passthrough'),
+                ['trained_model',
+                 LGBMClassifier(bagging_fraction=0.9090704690562509,
+                                bagging_freq=4,
+                                feature_fraction=0.5065746664258484,
+                                learning_rate=0.06699588304420269,
+                                min_child_samples=76,
+                                min_split_gain=0.4450203221860495,
+                                n_estimators=129, num_leaves=5,
+                                optimize_threshold='F1', random_state=777,
+                                reg_alpha=5.172619707249412e-07,
+                                reg_lambda=1.5785605569240774e-05)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2022-07-15 18:05:19,200:INFO:Checking exceptions
+2022-07-15 18:05:19,201:INFO:Preloading libraries
+2022-07-15 18:11:06,273:INFO:Initializing load_model()
+2022-07-15 18:11:06,274:INFO:load_model(model_name=./lgbm_tune_pycaret, platform=None, authentication=None, verbose=True)
+2022-07-15 18:11:06,340:INFO:Initializing predict_model()
+2022-07-15 18:11:06,341:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='Exited')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('pca', 'passthrough'),
+                ['trained_model',
+                 LGBMClassifier(bagging_fraction=0.9090704690562509,
+                                bagging_freq=4,
+                                feature_fraction=0.5065746664258484,
+                                learning_rate=0.06699588304420269,
+                                min_child_samples=76,
+                                min_split_gain=0.4450203221860495,
+                                n_estimators=129, num_leaves=5,
+                                optimize_threshold='F1', random_state=777,
+                                reg_alpha=5.172619707249412e-07,
+                                reg_lambda=1.5785605569240774e-05)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2022-07-15 18:11:06,342:INFO:Checking exceptions
+2022-07-15 18:11:06,343:INFO:Preloading libraries
+2022-07-15 18:11:08,919:INFO:Initializing load_model()
+2022-07-15 18:11:08,919:INFO:load_model(model_name=./lgbm_tune_pycaret, platform=None, authentication=None, verbose=True)
+2022-07-15 18:11:08,982:INFO:Initializing predict_model()
+2022-07-15 18:11:08,983:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='Exited')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('pca', 'passthrough'),
+                ['trained_model',
+                 LGBMClassifier(bagging_fraction=0.9090704690562509,
+                                bagging_freq=4,
+                                feature_fraction=0.5065746664258484,
+                                learning_rate=0.06699588304420269,
+                                min_child_samples=76,
+                                min_split_gain=0.4450203221860495,
+                                n_estimators=129, num_leaves=5,
+                                optimize_threshold='F1', random_state=777,
+                                reg_alpha=5.172619707249412e-07,
+                                reg_lambda=1.5785605569240774e-05)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2022-07-15 18:11:08,984:INFO:Checking exceptions
+2022-07-15 18:11:08,984:INFO:Preloading libraries
+2022-07-15 18:11:13,268:INFO:Initializing load_model()
+2022-07-15 18:11:13,269:INFO:load_model(model_name=./lgbm_tune_pycaret, platform=None, authentication=None, verbose=True)
+2022-07-15 18:11:13,324:INFO:Initializing predict_model()
+2022-07-15 18:11:13,325:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='Exited')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('pca', 'passthrough'),
+                ['trained_model',
+                 LGBMClassifier(bagging_fraction=0.9090704690562509,
+                                bagging_freq=4,
+                                feature_fraction=0.5065746664258484,
+                                learning_rate=0.06699588304420269,
+                                min_child_samples=76,
+                                min_split_gain=0.4450203221860495,
+                                n_estimators=129, num_leaves=5,
+                                optimize_threshold='F1', random_state=777,
+                                reg_alpha=5.172619707249412e-07,
+                                reg_lambda=1.5785605569240774e-05)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2022-07-15 18:11:13,326:INFO:Checking exceptions
+2022-07-15 18:11:13,327:INFO:Preloading libraries
+2022-07-15 18:11:18,416:INFO:Initializing load_model()
+2022-07-15 18:11:18,417:INFO:load_model(model_name=./lgbm_tune_pycaret, platform=None, authentication=None, verbose=True)
+2022-07-15 18:11:18,474:INFO:Initializing predict_model()
+2022-07-15 18:11:18,475:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='Exited')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('pca', 'passthrough'),
+                ['trained_model',
+                 LGBMClassifier(bagging_fraction=0.9090704690562509,
+                                bagging_freq=4,
+                                feature_fraction=0.5065746664258484,
+                                learning_rate=0.06699588304420269,
+                                min_child_samples=76,
+                                min_split_gain=0.4450203221860495,
+                                n_estimators=129, num_leaves=5,
+                                optimize_threshold='F1', random_state=777,
+                                reg_alpha=5.172619707249412e-07,
+                                reg_lambda=1.5785605569240774e-05)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2022-07-15 18:11:18,475:INFO:Checking exceptions
+2022-07-15 18:11:18,476:INFO:Preloading libraries
+2022-07-15 18:11:20,320:INFO:Initializing load_model()
+2022-07-15 18:11:20,321:INFO:load_model(model_name=./lgbm_tune_pycaret, platform=None, authentication=None, verbose=True)
+2022-07-15 18:11:20,364:INFO:Initializing predict_model()
+2022-07-15 18:11:20,365:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='Exited')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('pca', 'passthrough'),
+                ['trained_model',
+                 LGBMClassifier(bagging_fraction=0.9090704690562509,
+                                bagging_freq=4,
+                                feature_fraction=0.5065746664258484,
+                                learning_rate=0.06699588304420269,
+                                min_child_samples=76,
+                                min_split_gain=0.4450203221860495,
+                                n_estimators=129, num_leaves=5,
+                                optimize_threshold='F1', random_state=777,
+                                reg_alpha=5.172619707249412e-07,
+                                reg_lambda=1.5785605569240774e-05)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2022-07-15 18:11:20,366:INFO:Checking exceptions
+2022-07-15 18:11:20,367:INFO:Preloading libraries
+2022-07-15 18:11:26,295:INFO:Initializing load_model()
+2022-07-15 18:11:26,298:INFO:load_model(model_name=./lgbm_tune_pycaret, platform=None, authentication=None, verbose=True)
+2022-07-15 18:11:26,364:INFO:Initializing predict_model()
+2022-07-15 18:11:26,364:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='Exited')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('pca', 'passthrough'),
+                ['trained_model',
+                 LGBMClassifier(bagging_fraction=0.9090704690562509,
+                                bagging_freq=4,
+                                feature_fraction=0.5065746664258484,
+                                learning_rate=0.06699588304420269,
+                                min_child_samples=76,
+                                min_split_gain=0.4450203221860495,
+                                n_estimators=129, num_leaves=5,
+                                optimize_threshold='F1', random_state=777,
+                                reg_alpha=5.172619707249412e-07,
+                                reg_lambda=1.5785605569240774e-05)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2022-07-15 18:11:26,365:INFO:Checking exceptions
+2022-07-15 18:11:26,365:INFO:Preloading libraries
+2022-07-15 18:11:36,501:INFO:Initializing load_model()
+2022-07-15 18:11:36,501:INFO:load_model(model_name=./lgbm_tune_pycaret, platform=None, authentication=None, verbose=True)
+2022-07-15 18:11:36,558:INFO:Initializing predict_model()
+2022-07-15 18:11:36,559:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='Exited')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('pca', 'passthrough'),
+                ['trained_model',
+                 LGBMClassifier(bagging_fraction=0.9090704690562509,
+                                bagging_freq=4,
+                                feature_fraction=0.5065746664258484,
+                                learning_rate=0.06699588304420269,
+                                min_child_samples=76,
+                                min_split_gain=0.4450203221860495,
+                                n_estimators=129, num_leaves=5,
+                                optimize_threshold='F1', random_state=777,
+                                reg_alpha=5.172619707249412e-07,
+                                reg_lambda=1.5785605569240774e-05)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2022-07-15 18:11:36,560:INFO:Checking exceptions
+2022-07-15 18:11:36,561:INFO:Preloading libraries
