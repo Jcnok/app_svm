@@ -12,7 +12,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from pycaret.utils import check_metric
 from streamlit_lottie import st_lottie
-import plotly.graph_objects as go
 from streamlit_echarts import st_echarts
 import requests
 # remove warnings do streamlit
@@ -31,7 +30,7 @@ st.set_page_config(
     layout="wide", #centered",
     initial_sidebar_state='auto',
     menu_items=None)
-paginas = ['Home','Análise python','Análise de Churn', 'Solução', "Demonstação","Filtro", "Predição de Churn","Consulta Cliente", "Dashbord comparativo"]
+paginas = ['Home','Análise python','Análise de Churn BI', 'Data Science', "Demonstação","Filtro", "Predição de Churn","Consulta Cliente", "Dashbord comparativo"]
 site = ""
 site_pred = ""
 ###### SIDE BAR ######
@@ -43,15 +42,10 @@ with col2:
 ###### PAGINA INICIAL ######
 if pagina == 'Home':
     lottie_1 = load_lottieurl('https://assets2.lottiefiles.com/packages/lf20_3FIGvm.json')
-    st_lottie(lottie_1, speed=0.3, height=150, key="initial")
-    st.subheader("Análise de Churn")    
-    st.write("""
-    
-    Texto Sobre o Projeto
-    
-    link do projeto[GitHub](https://github.com/Jcnok/Stack_Labs_Churn).
-        
-    """)
+    st_lottie(lottie_1, speed=0.3, height=150, key="initial")    
+    col1,col2,col3 = st.columns([1,2,3])
+    site = "https://docs.google.com/presentation/d/e/2PACX-1vRuiyA_eVhRcdNymAubZKRNTewo3f2zpg1KZbqrMu2nBhkh7C_XBeBHyp74Efost0X0jsMKCxLULA1_/embed?start=false&loop=false&delayms=3000"
+    st.components.v1.iframe(site, width=960, height=569)     
 ###### PAGINA Análise python ######
 if pagina == 'Análise python':
     lottie_2 = load_lottieurl('https://assets9.lottiefiles.com/packages/lf20_m9zragkd.json')
@@ -60,31 +54,28 @@ if pagina == 'Análise python':
     HtmlFile = open("Analise_churn.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     #print(source_code)
-    st.components.v1.html(source_code,height = 29500)  
+    st.components.v1.html(source_code,height = 27500)  
 
 
 ###### BI ######
-if pagina == 'Análise de Churn':
+if pagina == 'Análise de Churn BI':
     st.subheader("Análise de Churn")    
     col1,col2,col3 = st.columns([1,2,3])
-    st.components.v1.iframe(site, width=1400, height=800, scrolling=True)
+    site = "https://bi"
+    st.components.v1.iframe(site, width=960, height=600, scrolling=True)
 
     st.sidebar.write("""O Dashbord: exemplificar.   
     
     """)
-###### PAGINA Solução ######
-if pagina == 'Solução':
+###### PAGINA Data Science ######
+if pagina == 'Data Science':
     lottie_3 = load_lottieurl('https://assets9.lottiefiles.com/packages/lf20_q5qeoo3q.json')
     st_lottie(lottie_3, speed=0.5, height=150, key="initial")
     st.subheader("Proposta de solução usando Machine Learning")
-    st.write("""
-    
-        Explicar sobre o trabalho de ML desenvolvido.
-    """)
-
-    st.write("""
-	    Desafio proposto.   
-    """)    
+    HtmlFile = open("DataScience.html", 'r', encoding='utf-8')
+    ds_code = HtmlFile.read() 
+    #print(source_code)
+    st.components.v1.html(ds_code,height = 34000)    
 
 ###### Demonstação do modelo de machine learning ######
 if pagina == 'Demonstação':
