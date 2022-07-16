@@ -59,14 +59,11 @@ if pagina == 'Análise python':
 
 ###### BI ######
 if pagina == 'Análise de Churn BI':
-    st.subheader("Análise de Churn")    
+    st.subheader("Análise de Churn power BI")    
     col1,col2,col3 = st.columns([1,2,3])
-    site = "https://bi"
-    st.components.v1.iframe(site,  width=1400, height=800, scrolling=True)
-
-    st.sidebar.write("""O Dashbord: exemplificar.   
+    site = "https://app.powerbi.com/view?r=eyJrIjoiZGVmMDc4N2ItMWYyYi00MDE3LWFkYzItOTc0YzQ4NThlNzZhIiwidCI6Ijg5ZmI0ZjFmLTg1NjctNDEyOC1iMWUzLWNhM2IyZTVhYmRmOCJ9"
+    st.components.v1.iframe(site,  width=960, height=600, scrolling=True)    
     
-    """)
 ###### PAGINA Data Science ######
 if pagina == 'Data Science':
     lottie_3 = load_lottieurl('https://assets9.lottiefiles.com/packages/lf20_q5qeoo3q.json')
