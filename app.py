@@ -520,7 +520,8 @@ if pagina == "Consulta Cliente" :
 if pagina == 'Dashbord comparativo':    
     st.subheader("Dashboard compartivo entre o resultado real Vs resultado do modelo")    
     col1,col2,col3 = st.columns([1,2,3])
-    st.components.v1.iframe(site_pred, width=1400, height=800, scrolling=True)
+    site = "https://app.powerbi.com/view?r=eyJrIjoiZDBlNTgzMzktOGJkYy00NTkxLWExMDYtODJmOTU1MmVjODE5IiwidCI6Ijg5ZmI0ZjFmLTg1NjctNDEyOC1iMWUzLWNhM2IyZTVhYmRmOCJ9"
+    st.components.v1.iframe(site,  width=960, height=600, scrolling=True)
 
     st.sidebar.write("""O Dashbord é interativo, posicione o mouse sobre os gráficos para obter o comparativo de acertos.    
     """)
