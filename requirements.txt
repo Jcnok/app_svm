@@ -1,3 +1,4 @@
+python_version < "3.9"
 GitPython==3.1.27
 matplotlib==3.5.2
 numpy==1.19.5
